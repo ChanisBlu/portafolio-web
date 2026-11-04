@@ -1,13 +1,282 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>portafolio-web</title>
+    <meta name="description" content="Portafolio de Isaac Razo Soto, Desarrollador Java Full Stack Jr. en Ciudad de México." />
+    <title>Isaac Razo | Desarrollador Java Full Stack</title>
+    <!-- pone el tema guardado antes de pintar la pagina -->
+    <script>
+      document.documentElement.dataset.theme = localStorage.getItem('portafolio-tema') || 'light';
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div id="app"></div>
+  <body data-bs-spy="scroll" data-bs-target="#menu" data-bs-offset="80">
+
+    <!-- 1. NAVBAR (Bootstrap: navbar + collapse) -->
+    <nav id="menu" class="navbar navbar-expand-lg fixed-top nav-editorial">
+      <div class="container-fluid px-4 px-lg-5">
+        <a class="navbar-brand marca" href="#inicio">isaac razo.</a>
+        <button class="navbar-toggler rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navLinks" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navLinks">
+          <ul class="navbar-nav ms-auto mono">
+            <li class="nav-item"><a class="nav-link" href="#inicio">00 Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="#sobre-mi">01 Sobre mí</a></li>
+            <li class="nav-item"><a class="nav-link" href="#habilidades">02 Habilidades</a></li>
+            <li class="nav-item"><a class="nav-link" href="#proyectos">03 Proyectos</a></li>
+            <li class="nav-item"><a class="nav-link" href="#experiencia">04 Experiencia</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">05 Contacto</a></li>
+          </ul>
+          <button id="btnTema" class="btn btn-borde btn-tema ms-lg-3 mt-2 mt-lg-0" type="button" aria-label="Cambiar modo claro u oscuro">◐ MODO</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="inicio" class="hero">
+      <div class="container-fluid px-3 px-lg-5">
+        <div class="lienzo">
+          <div class="meta-fila mono">
+            <span>+1 · PORTAFOLIO</span>
+            <span class="d-none d-md-inline">CDMX · MX</span>
+            <span class="estado"><span class="punto"></span> DISPONIBLE PARA POSICIONES JR.</span>
+          </div>
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-7 position-relative">
+              <p class="mono pequena">DESARROLLADOR JAVA FULL STACK JR.</p>
+              <h1 class="titular">isaac<br>razo.</h1>
+              <span class="numero-vertical" aria-hidden="true">CH73</span>
+            </div>
+            <div class="col-lg-5 position-relative">
+              <span class="texto-vertical mono" aria-hidden="true">JAVASCRIPT · BOOTSTRAP · JAVA EN FORMACIÓN · 2026</span>
+              <div class="bloque-foto">
+                <img src="/img/isaac-razo-busto.jpg" alt="Isaac Razo hablando en público" class="foto-circulo">
+              </div>
+            </div>
+          </div>
+          <div class="row g-4 mt-1 regla-top pt-4">
+            <div class="col-lg-6">
+              <p class="intro">Construyo interfaces web responsivas con HTML, CSS, JavaScript y Bootstrap, y hoy aprendo Java y Spring Boot para backend. Vengo del diseño y el arte digital: me importa que el código funcione y que la interfaz se entienda.</p>
+            </div>
+            <div class="col-lg-6 d-flex flex-wrap gap-2 align-items-start justify-content-lg-end">
+              <!-- 2. BOTONES (Bootstrap: btn) -->
+              <a href="#proyectos" class="btn btn-tinta">VER PROYECTOS ↓</a>
+              <a href="#contacto" class="btn btn-borde">CONTÁCTAME</a>
+              <a href="https://github.com/ChanisBlu" target="_blank" rel="noopener" class="btn btn-borde">GITHUB ↗</a>
+              <a href="https://www.linkedin.com/in/isaac-razo-soto/" target="_blank" rel="noopener" class="btn btn-borde">LINKEDIN ↗</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cinta mono" aria-hidden="true"><div class="cinta-track">JAVASCRIPT · HTML · CSS · BOOTSTRAP · JAVA · GIT · JEST · VITE · SCRUM · JAVASCRIPT · HTML · CSS · BOOTSTRAP · JAVA · GIT · JEST · VITE · SCRUM ·</div></div>
+    </header>
+
+    <main>
+      <!-- 01 SOBRE MÍ -->
+      <section id="sobre-mi" class="seccion">
+        <div class="container-fluid px-4 px-lg-5">
+          <div class="encabezado"><span class="mono">01 /</span><h2>sobre mí.</h2></div>
+          <div class="row g-5">
+            <div class="col-lg-7 texto-columna">
+              <p>Estoy en el Bootcamp Java Full Stack de Generation México. Con mi equipo <strong>1001 Labs</strong> construimos CoffeeMod, un e-commerce de café de especialidad, donde desarrollo componentes del frontend. En los primeros sprints también fui el Scrum Master.</p>
+              <p>Antes trabajé en soporte técnico y reclutamiento bilingüe, en equipos remotos con clientes de Estados Unidos. De ahí me traje algo que uso todos los días programando: escuchar bien el problema antes de querer resolverlo.</p>
+              <p>Fuera del código pinto e ilustro bajo el nombre <strong>Chanis FX</strong>.</p>
+            </div>
+            <div class="col-lg-5">
+              <!-- 3. LIST GROUP (Bootstrap: list-group) -->
+              <ul class="list-group list-group-flush ficha mono">
+                <li class="list-group-item d-flex justify-content-between"><span>ROL</span><strong>FRONTEND · 1001 LABS</strong></li>
+                <li class="list-group-item d-flex justify-content-between"><span>FORMACIÓN</span><strong>GENERATION MÉXICO</strong></li>
+                <li class="list-group-item d-flex justify-content-between"><span>IDIOMAS</span><strong>ESPAÑOL · INGLÉS C1</strong></li>
+                <li class="list-group-item d-flex justify-content-between"><span>UBICACIÓN</span><strong>CIUDAD DE MÉXICO</strong></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 02 HABILIDADES -->
+      <section id="habilidades" class="seccion">
+        <div class="container-fluid px-4 px-lg-5">
+          <div class="encabezado"><span class="mono">02 /</span><h2>habilidades.</h2></div>
+          <div class="row g-5">
+            <div class="col-md-6">
+              <h5 class="mono subt">TÉCNICAS</h5>
+              <!-- 6. BADGES (Bootstrap: badge) -->
+              <div class="d-flex flex-wrap gap-2 etiquetas">
+                <span class="badge">JAVASCRIPT</span><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">BOOTSTRAP</span><span class="badge">GIT Y GITHUB</span><span class="badge">JEST</span><span class="badge">VITE</span><span class="badge">FIGMA</span><span class="badge">JIRA</span><span class="badge">JAVA (EN CURSO)</span><span class="badge">SPRING BOOT (EN CURSO)</span>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <h5 class="mono subt">BLANDAS</h5>
+              <div class="d-flex flex-wrap gap-2 etiquetas etiquetas-borde">
+                <span class="badge">TRABAJO EN EQUIPO</span><span class="badge">COMUNICACIÓN ASERTIVA</span><span class="badge">PROACTIVIDAD</span><span class="badge">RESOLUCIÓN DE PROBLEMAS</span><span class="badge">ADAPTABILIDAD</span><span class="badge">SCRUM</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 03 PROYECTOS -->
+      <section id="proyectos" class="seccion invertida">
+        <div class="container-fluid px-4 px-lg-5">
+          <div class="encabezado"><span class="mono">03 /</span><h2>proyectos.</h2></div>
+
+          <!-- 4. CARDS (Bootstrap: card + grid row-cols) -->
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-0 tarjetas">
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <span class="mono num">01 · JS · BOOTSTRAP · EQUIPO</span>
+                  <h5 class="card-title">CoffeeMod · 1001 Labs</h5>
+                  <p class="card-text">E-commerce de café de especialidad hecho en equipo de 9. Hice el header y el logo como componentes reutilizables y la navegación entre páginas con rutas relativas.</p>
+                </div>
+                <div class="card-footer"><a href="https://github.com/Vktr1001/CoffeeMod_Frontend" target="_blank" rel="noopener" class="btn btn-azul">REPOSITORIO ↗</a></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <span class="mono num">02 · JS · LOCALSTORAGE · JEST</span>
+                  <h5 class="card-title">Iron Fit Store · Hackatón</h5>
+                  <p class="card-text">Landing de una tienda de equipo de fuerza, hecha en 6 horas con un equipo de 4. Programé el carrito con localStorage y 9 pruebas unitarias con Jest.</p>
+                </div>
+                <div class="card-footer"><a href="https://github.com/ChanisBlu/IronFitStore-Hackaton-1" target="_blank" rel="noopener" class="btn btn-azul">REPOSITORIO ↗</a></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <span class="mono num">03 · JAVASCRIPT</span>
+                  <h5 class="card-title">Ejercicios de lógica</h5>
+                  <p class="card-text">Retos de lógica con JavaScript puro: validar datos del usuario, condicionales, ciclos y conversiones de temperatura.</p>
+                </div>
+                <div class="card-footer"><a href="https://github.com/ChanisBlu/ejercicios-de-logica" target="_blank" rel="noopener" class="btn btn-azul">REPOSITORIO ↗</a></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <span class="mono num">04 · JEST · TDD</span>
+                  <h5 class="card-title">Pruebas unitarias</h5>
+                  <p class="card-text">Pruebas automatizadas con Jest para funciones y una clase de usuarios, incluyendo casos límite como dividir entre cero.</p>
+                </div>
+                <div class="card-footer"><a href="https://github.com/ChanisBlu/Labs-CH73/tree/main/AD-20-PruebasUnitarias-Individual" target="_blank" rel="noopener" class="btn btn-azul">REPOSITORIO ↗</a></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <span class="mono num">05 · HTML · CSS · GITHUB PAGES</span>
+                  <h5 class="card-title">Chanis FX</h5>
+                  <p class="card-text">Sitio estático publicado en GitHub Pages y adaptable a celular.</p>
+                </div>
+                <div class="card-footer"><a href="https://chanisblu.github.io/Labs-CH73/AD-07/" target="_blank" rel="noopener" class="btn btn-azul">VER SITIO ↗</a></div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-body">
+                  <span class="mono num">06 · JAVA</span>
+                  <h5 class="card-title">Colecciones en Java</h5>
+                  <p class="card-text">Ejercicios con arrays, ArrayList y HashSet: promedios, calificaciones y validación de usernames con Scanner.</p>
+                </div>
+                <div class="card-footer"><span class="mono num">REPOSITORIO EN CAMINO</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 04 EXPERIENCIA -->
+      <section id="experiencia" class="seccion">
+        <div class="container-fluid px-4 px-lg-5">
+          <div class="encabezado"><span class="mono">04 /</span><h2>experiencia.</h2></div>
+          <!-- 7. ACCORDION (Bootstrap: accordion) -->
+          <div class="accordion acordeon" id="acordeonExperiencia">
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#exp1" aria-expanded="true" aria-controls="exp1"><span class="mono fecha">OCT 2026 · ACTUAL</span>Desarrollador Frontend · CoffeeMod (1001 Labs)</button></h2>
+              <div id="exp1" class="accordion-collapse collapse show" data-bs-parent="#acordeonExperiencia"><div class="accordion-body">Desarrollo el frontend de un e-commerce de café de especialidad con HTML, CSS, JavaScript, Bootstrap y Vite, en un equipo de 9. Construí componentes reutilizables (barra de navegación y logo) y trabajo con ramas y pull requests en GitHub, Jira y Figma. En los primeros sprints fui el Scrum Master.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp2" aria-expanded="false" aria-controls="exp2"><span class="mono fecha">MAY 2026 · AGO 2026</span>Soporte Técnico · TTEC</button></h2>
+              <div id="exp2" class="accordion-collapse collapse" data-bs-parent="#acordeonExperiencia"><div class="accordion-body">Soporte técnico bilingüe a clientes de Verizon Fios: fallas de internet, TV y telefonía, retención y venta de servicios adicionales bajo métricas de calidad.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp3" aria-expanded="false" aria-controls="exp3"><span class="mono fecha">ENE 2025 · DIC 2025</span>Reclutador bilingüe · Smart Pro Connect (cuenta Angels In Your Home)</button></h2>
+              <div id="exp3" class="accordion-collapse collapse" data-bs-parent="#acordeonExperiencia"><div class="accordion-body">Reclutamiento remoto para una agencia de cuidado a domicilio en Nueva York, con seguimiento de todo el proceso hasta el primer día de cada colaboradora.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exp4" aria-expanded="false" aria-controls="exp4"><span class="mono fecha">2023 · 2026</span>Formación</button></h2>
+              <div id="exp4" class="accordion-collapse collapse" data-bs-parent="#acordeonExperiencia"><div class="accordion-body">Bootcamp Desarrollador Java Full Stack, Generation México (2026). Diseño, animación y arte digital, UNITEC (2023 a 2024). Curso de Java, Accenture Learning to Earning (2026). Curso propedéutico de Inteligencia Artificial, INFOTEC (2026).</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 05 CONTACTO -->
+      <section id="contacto" class="seccion invertida">
+        <div class="container-fluid px-4 px-lg-5">
+          <div class="encabezado"><span class="mono">05 /</span><h2>hablemos.</h2></div>
+          <div class="row g-5">
+            <div class="col-lg-5">
+              <p class="intro">¿Tienes una vacante Jr. o un proyecto? Escríbeme y te respondo en menos de 24 horas.</p>
+              <ul class="list-unstyled mono enlaces">
+                <li><a href="mailto:isaacrazo000@gmail.com">ISAACRAZO000@GMAIL.COM ↗</a></li>
+                <li><a href="https://github.com/ChanisBlu" target="_blank" rel="noopener">GITHUB.COM/CHANISBLU ↗</a></li>
+                <li><a href="https://www.linkedin.com/in/isaac-razo-soto/" target="_blank" rel="noopener">LINKEDIN.COM/IN/ISAAC-RAZO-SOTO ↗</a></li>
+              </ul>
+            </div>
+            <div class="col-lg-7">
+              <!-- 8. FORMULARIO con validación (Bootstrap: forms + needs-validation) -->
+              <form id="formContacto" class="needs-validation formulario" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="nombre" class="form-label mono">NOMBRE</label>
+                    <input type="text" class="form-control" id="nombre" required minlength="2">
+                    <div class="invalid-feedback">Escribe tu nombre.</div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="correo" class="form-label mono">CORREO</label>
+                    <input type="email" class="form-control" id="correo" required>
+                    <div class="invalid-feedback">Escribe un correo válido.</div>
+                  </div>
+                  <div class="col-12">
+                    <label for="mensaje" class="form-label mono">MENSAJE</label>
+                    <textarea class="form-control" id="mensaje" rows="4" required minlength="10"></textarea>
+                    <div class="invalid-feedback">El mensaje debe tener al menos 10 caracteres.</div>
+                  </div>
+                  <div class="col-12"><button class="btn btn-azul w-100" type="submit">ENVIAR MENSAJE →</button></div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 9. TOAST de confirmación (Bootstrap: toast) -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="toastEnviado" class="toast aviso" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex"><div class="toast-body mono">✓ MENSAJE ENVIADO. TE RESPONDO PRONTO.</div><button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Cerrar"></button></div>
+      </div>
+    </div>
+
+    <footer class="pie">
+      <div class="container-fluid px-4 px-lg-5">
+        <p class="pie-titular">isaac razo.</p>
+        <div class="d-flex flex-column flex-md-row justify-content-between gap-2 mono pie-meta">
+          <span>© 2026 · HTML · CSS · JAVASCRIPT · BOOTSTRAP</span>
+          <a href="#inicio">VOLVER ARRIBA ↑</a>
+        </div>
+      </div>
+    </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
